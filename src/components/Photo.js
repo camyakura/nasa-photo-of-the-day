@@ -10,7 +10,6 @@ function Photo (props) {
             <h3>{date}</h3>
             <img src={photo} alt={title}></img>
             <p>{text}</p>
-
         </div>
     )
 }
