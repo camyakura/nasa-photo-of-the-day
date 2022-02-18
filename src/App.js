@@ -2,6 +2,16 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios'
 import Photo from './components/Photo'
+import styled, {keyframes} from 'styled-components'
+
+const StyledApp = styled.div`
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  background-color: ${pr => pr.theme.tertiaryColor}
+
+  
+`
 
 
 function App() {
@@ -27,11 +37,11 @@ function App() {
 
 
   return (
-      <div className="App">
+      <StyledApp className="App">
         <h1>NASA Photo of the Day</h1>
         { error && <h2>NO ONE HOME</h2> }
         { <Photo photo={photos.hdurl} title={photos.title} text={photos.explanation} date={photos.date}/> }
-      </div>
+      </StyledApp>
   );
 }
 
