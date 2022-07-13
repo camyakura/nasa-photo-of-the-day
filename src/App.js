@@ -20,7 +20,7 @@ function App() {
   const [error, setError] =useState(null);
 
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=wSCiKTqZp5WP6eLFeSu5Kutqt2YCjh4xAyia7oAg&date=2012-03-14`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
       .then(resp => {
         setPhotos(resp.data)
         console.log(resp.data)
